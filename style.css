@@ -1,0 +1,14 @@
+svg{
+    background-color: whitesmoke;
+    min-width: 1000px;
+    min-height: 800px;
+}
+#legend{
+    width: fit-content !important;
+    height: fit-content !important;
+}
+#tooltip{
+    visibility: hidden;
+    height: auto;
+    width: auto;
+}
