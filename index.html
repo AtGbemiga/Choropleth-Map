@@ -8,37 +8,44 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" integrity="sha512-4UKI/XKm3xrvJ6pZS5oTRvIQGIzZFoXR71rRBb1y2N+PbwAsKa5tPl2J6WvbEvwN3TxQCm8hMzsl/pO+82iRlg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1 id="title">United States Educational Attainment</h1>
-    <h3 id="description">Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)</h3>
-    <div id="tooltip">
+<body style="display: flex; flex-direction: row; display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
+    <section>
+        <h1 id="title">United States Educational Attainment</h1>
+        <h3 id="description">Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)</h3>
+        <svg id="map">
 
-    </div>
-    <svg>
+        </svg>
+    </section>
+    <section>
+        <div id="tooltip">
 
-    </svg>
-    <svg id="legend">
-        <g>
-            <rect x="10" y="0" height="40" width="40" fill="grey"></rect>
-            <text x="60" y="20">Less than 15</text>
-        </g>
-        <g>
-            <rect x="10" y="40" height="40" width="40" fill="yellow"></rect>
-            <text x="60" y="60">Less than 30</text>
-        </g>
-        <g>
-            <rect x="10" y="80" height="40" width="40" fill="blue"></rect>
-            <text x="60" y="100">Less than 60</text>
-        </g>
-        <g>
-            <rect x="10" y="120" height="40" width="40" fill="green"></rect>
-            <text x="60" y="140">Less than 90</text>
-        </g>
-    </svg>
-    
-
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        </div>
+        <svg id="legend">
+            <g>
+                <rect x="10" y="0" height="40" width="40" fill="grey"></rect>
+                <text x="60" y="20">Less than 15</text>
+            </g>
+            <g>
+                <rect x="10" y="40" height="40" width="40" fill="yellow"></rect>
+                <text x="60" y="60">Less than 30</text>
+            </g>
+            <g>
+                <rect x="10" y="80" height="40" width="40" fill="blue"></rect>
+                <text x="60" y="100">Less than 60</text>
+            </g>
+            <g>
+                <rect x="10" y="120" height="40" width="40" fill="green"></rect>
+                <text x="60" y="140">Less than 90</text>
+            </g>
+        </svg>
+        <div style="margin-top: 2.5rem;">Source:
+            <a style="text-decoration: none;" href="https://www.ers.usda.gov/data-products/county-level-data-sets/download-data.aspx">USDA Economic Research Service</a>
+        </div>
+    </section>
     <script src="app.js"></script>
 </body>
 </html>

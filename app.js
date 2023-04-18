@@ -4,7 +4,7 @@ let urlTwo = 'https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth
 let urlValOne
 let urlValTwo
 
-let svg = d3.select('svg')
+let svg = d3.select('#map')
 let tooltip = d3.select('#tooltip')
 
 let plotMap = () => {
@@ -48,13 +48,13 @@ let plotMap = () => {
                 let valOneLoca = urlValTwo.find(item => {
                     return item.fips === id
                 })
-                tooltip.text( `${valOneLoca.area_name}, ${valOneLoca.bachelorsOrHigher}%`)
+                tooltip.text( `${valOneLoca.area_name},${valOneLoca.state}: ${valOneLoca.bachelorsOrHigher}%`)
                 .attr('data-education', item => {
                     return valOneLoca.bachelorsOrHigher
                 })
         })
         .on('mouseout', item => {
-            tooltip.style('visibility', 'hidden')
+            tooltip.transition().style('visibility', 'hidden')
         })
 }
 

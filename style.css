@@ -1,7 +1,12 @@
-svg{
-    background-color: whitesmoke;
-    min-width: 1000px;
-    min-height: 800px;
+body{
+    background: rgb(194,238,174);
+    background: radial-gradient(circle, rgba(194,238,174,1) 0%, rgba(85,227,36,1) 100%);
+    font-family: 'Inter', sans-serif;
+}
+#map{
+    background-color: white;
+    width: 1000px;
+    height: 600px;
 }
 #legend{
     width: fit-content !important;
@@ -11,4 +16,7 @@ svg{
     visibility: hidden;
     height: auto;
     width: auto;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
